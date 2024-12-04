@@ -1,0 +1,19 @@
+.header {
+
+    background-color: white;
+}
+
+.header__inner {
+
+    width: 1512px;
+    height: 100px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    border: 1px solid #E0DFDE;
+}
+
+h1 {
+
+    color: #8B7969;
+}
