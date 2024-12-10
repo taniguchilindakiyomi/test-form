@@ -7,6 +7,7 @@
 
 @section('content')
 
+
         <div class="contact-form__content">
             <div class="contact-form__heading">
                 <h2 class="contact-form__logo">Contact</h2>
@@ -42,9 +43,11 @@
                     </div>
                     <div class="form__group-content">
                         <div class="form__input--radio">
+                            <label for="accented">
                             <input type="radio" name="gender" value="男" {{ old('gender') == '男' ? 'checked' : '' }}>男
                             <input type="radio" name="gender" value="女" {{ old('gender') == '女' ? 'checked' : ''}} >女
                             <input type="radio" name="gender" value="ぞの他" {{ old('gender') == 'その他' ? 'checked' : '' }}>その他
+                            </label>
                         </div>
                         <div class="form__error">
                             @error('gender')
@@ -139,7 +142,7 @@
                     <div class="form__group-content">
                         <div class="form__input-select">
                             <select class="select" name="content">
-                            <option value="" disabled selected>選択してください</option>
+                            <option value="disabled selected">選択してください</option>
                             <option value="商品のお届けについて"{{ old('content') == '商品のお届けについて' ? 'selected' : '' }}>商品のお届けについて</option>
                             <option value="商品の交換について" {{ old('content') == '商品の交換について' ? 'selected' : '' }}>商品の交換について</option>
                             <option value="商品トラブル" {{ old('content') == '商品トラブル' ? 'selected' : '' }}>商品トラブル</option>
@@ -175,8 +178,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="form__button">
+                <div class="form__group">
+                  <div class="form__button">
                     <button class="form__button-submit" type="submit">確認画面</button>
+                  </div>
                 </div>
             </form>
         </div>

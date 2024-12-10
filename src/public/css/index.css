@@ -1,0 +1,53 @@
+.contact-form__content
+{
+    width: 121px;
+    height: 46px;
+    top: 150px;
+    left: 694px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+
+.contact-form__logo
+{
+
+    color: #8B7969;
+    font-family: Inika;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45.61px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+
+.form__label--item
+{
+    color:  #8B7969;
+
+}
+
+.form__label--required
+{
+    color: red;
+}
+
+
+
+
+.form__button-submit
+{
+    background: #82756A;
+    color: white;
+    width: (160px)px;
+    height: (46px)px;
+    top: 903px;
+    left: 674px;
+    padding: 10px 40px 10px 40px;
+    gap: 10px;
+    opacity: 0px;
+    border: none;
+    outline: none;
+}

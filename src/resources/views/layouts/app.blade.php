@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <h1>FashionablyLate</h1>
+            <h1 class="header__title">FashionablyLate</h1>
         </div>
     </header>
 

@@ -10,10 +10,25 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <a class="header__logo" href="/register">
-                <h2>FashionablyLate</h2>
-            </a>
+           <h1 class="header__title">FashionablyLate</h1>
+           <nav>
+                <ul class="header-nav">
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="/register">login</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
+
+
+    <main>
+        <div class="contact-form__content">
+            <div class="contact-form__heading">
+                <h2 class="contact-form__logo">Login</h2>
+            </div>
+        </div>
+
+    </main>
 </body>
 </html>

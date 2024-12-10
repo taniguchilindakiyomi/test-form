@@ -9,10 +9,10 @@
 
         <div class="confirm_content">
             <div class="confirm__heading">
-                <h2>Confirm</h2>
+                <h2 class="contact-form__logo">Confirm</h2>
             </div>
-            <form class="form" action="/thanks" method="post">
-            @csrf
+             <form class="form" action="/thanks" method="post">
+                @csrf
                 <div class="confirm-table">
                     <table class="confirm-table__inner">
                         <tr class="confirm-table__row">
@@ -59,7 +59,7 @@
                             <th class="confirm-table__header">お問い合せの種類
                             </th>
                             <td class="confirm-table__text">
-                                <input type="text" name="content" value="{{ $contact['content'] }}" readonly />
+                                <input type="text" name="content" value="{{ $category->content }}" readonly />
                             </td>
                         </tr>
                         <tr class="confirm-table__row">
@@ -72,9 +72,13 @@
                     </table>
                 </div>
                 <div class="form__actions">
-                    <button class="submit-button" type="submit">送信</button>
-                    <button class="reset-button" type="submit">修正</button>
+                    <div class="send-from">
+                      <button class="send-form__button" type="submit">送信</button>
+                    </div>
+                    <div class="correct-form">
+                      <button class="correct-form__button" type="submit">修正</button>
+                    </div>
                 </div>
-            </form>
+             </form>
         </div>
 @endsection

@@ -24,17 +24,32 @@ class FormController extends Controller
         $contact['tel'] = $request->input('tel1') . $request->input('tel2') . $request->input('tel3');
 
 
+
         return view('confirm', compact('contact'));
     }
 
 
+    public function store (TestRequest $request)
+    {
+         $contact = $request->only(['first_name', 'last_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']);
 
-   public function store(TestRequest $request)
-   {
-       $contact = $request->only(['first_name', 'last_name', 'gender', 'email', 'tel', 'address', 'building', 'content', 'detail']);
+         Contact::create($contact);
 
-       Contact::create($contact);
 
-         return view('thanks');
-   }
+         $category = [
+            'content' => $request->input('content')
+         ];
+
+         $category = Category::create($category);
+
+         $contact->category_id = $category->id;
+         $contact->save();
+
+
+
+         return view('tanks');
+    }
+
+
+
 }

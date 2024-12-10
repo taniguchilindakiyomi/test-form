@@ -1,19 +1,19 @@
-.header {
 
-    background-color: white;
+.contact-form__logo {
+
+    font-family: Inika;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45.61px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
 }
 
-.header__inner {
 
-    width: 1512px;
-    height: 100px;
-    gap: 0px;
-    border: 1px 0px 0px 0px;
-    opacity: 0px;
-    border: 1px solid #E0DFDE;
-}
 
-h1 {
-
-    color: #8B7969;
+.send-form__button
+{
+    background: #82756A;
+    color: white;
 }

@@ -1,6 +1,8 @@
+
 .header {
 
     background-color: white;
+
 }
 
 .header__inner {
@@ -11,9 +13,13 @@
     border: 1px 0px 0px 0px;
     opacity: 0px;
     border: 1px solid #E0DFDE;
+
 }
 
-h1 {
+.header__title{
 
-    color: #8B7969;
+    color:#8B7969;;
+    text-align: center;
+
+
 }
