@@ -43,10 +43,14 @@
                     </div>
                     <div class="form__group-content">
                         <div class="form__input--radio">
-                            <label for="accented">
-                            <input type="radio" name="gender" value="男" {{ old('gender') == '男' ? 'checked' : '' }}>男
-                            <input type="radio" name="gender" value="女" {{ old('gender') == '女' ? 'checked' : ''}} >女
-                            <input type="radio" name="gender" value="ぞの他" {{ old('gender') == 'その他' ? 'checked' : '' }}>その他
+                            <label for="gender_male">
+                            <input type="radio" id="gender_male" name="gender" value="男" {{ old('gender') == '男' ? 'checked' : '' }}>男
+                            </label>
+                            <label for="gender_female">
+                            <input type="radio" id="gender_female" name="gender" value="女" {{ old('gender') == '女' ? 'checked' : ''}} >女
+                            </label>
+                            <label for="gender_others">
+                            <input type="radio" id="gender_others" name="gender" value="その他" {{ old('gender') == 'その他' ? 'checked' : '' }}>その他
                             </label>
                         </div>
                         <div class="form__error">
@@ -141,18 +145,18 @@
                     </div>
                     <div class="form__group-content">
                         <div class="form__input-select">
-                            <select class="select" name="content">
-                            <option value="disabled selected">選択してください</option>
-                            <option value="商品のお届けについて"{{ old('content') == '商品のお届けについて' ? 'selected' : '' }}>商品のお届けについて</option>
-                            <option value="商品の交換について" {{ old('content') == '商品の交換について' ? 'selected' : '' }}>商品の交換について</option>
-                            <option value="商品トラブル" {{ old('content') == '商品トラブル' ? 'selected' : '' }}>商品トラブル</option>
-                            <option value="ショップへのお問い合わせ"
-                            {{ old('content') == 'ショップへのお問い合わせ' ? 'selected' : '' }}>ショップへのお問い合わせ</option>
-                            <option value="その他"{{ old('content') == 'その他' ? 'selected' : '' }}>その他</option>
+                            <select class="select" name="category_id">
+                            <option value="" disabled selected>選択してください</option>
+                            <option value="1"{{ old('category_id') == 1 ? 'selected' : '' }}>商品のお届けについて</option>
+                            <option value="2" {{ old('category_id') == 2 ? 'selected' : '' }}>商品の交換について</option>
+                            <option value="3" {{ old('category_id') == 3 ? 'selected' : '' }}>商品トラブル</option>
+                            <option value="4"
+                            {{ old('category_id') == 4 ? 'selected' : '' }}>ショップへのお問い合わせ</option>
+                            <option value="5"{{ old('category_id') == 5 ? 'selected' : '' }}>その他</option>
                             </select>
                         </div>
                         <div class="form__error">
-                            @error('content')
+                            @error('category_id')
                             {{ $message }}
                             @enderror
 

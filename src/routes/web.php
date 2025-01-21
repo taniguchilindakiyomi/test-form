@@ -17,4 +17,12 @@ use App\Http\Controllers\FormController;
 
 Route::get('/', [FormController::class, 'index']);
 Route::post('/confirm', [FormController::class, 'confirm']);
+
 Route::post('/thanks', [FormController::class, 'store']);
+
+
+Route::middleware('auth')->group(function () {
+        Route::get('/admin', [FormController::class, 'admin']);
+
+});
+

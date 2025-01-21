@@ -1,4 +1,4 @@
-@extends(layouts.app)
+@extends('layouts.app')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/thanks.css') }}">
@@ -14,7 +14,7 @@
             <div class="thanks__heading">
                 <h2>お問い合わせありがとうございました</h2>
             </div>
-      <form class="form">
+      <form class="form" action="/" method="get">
             <div class="form__button">
                 <button class="form__button-submit">HOME</button>
             </div>
